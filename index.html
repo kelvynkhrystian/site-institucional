@@ -145,28 +145,38 @@
       </div>
 
       <!-- Menu Mobile -->
+      <!-- (Cor escura fixa para contrastar com o fundo branco) -->
       <div
         id="mobile-menu"
         class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-6 pt-3 pb-6 space-y-5 shadow-xl transition-all duration-300 opacity-0 -translate-y-4"
       >
-        <nav class="flex flex-col space-y-3 font-semibold text-gray-700">
-          <a href="#inicio" class="nav-link py-2 border-b border-gray-50"
+        <!-- Forcei text-gray-800 aqui nos links do menu mobile -->
+        <nav class="flex flex-col space-y-3 font-semibold text-gray-800">
+          <a
+            href="#inicio"
+            class="nav-link-mobile py-2 border-b border-gray-100 hover:text-vibe-orange transition-colors"
             >Início</a
           >
-          <a href="#quem-somos" class="nav-link py-2 border-b border-gray-50"
+          <a
+            href="#quem-somos"
+            class="nav-link-mobile py-2 border-b border-gray-100 hover:text-vibe-orange transition-colors"
             >Quem Somos</a
           >
-          <a href="#servicos" class="nav-link py-2 border-b border-gray-50"
+          <a
+            href="#servicos"
+            class="nav-link-mobile py-2 border-b border-gray-100 hover:text-vibe-orange transition-colors"
             >Nossos Serviços</a
           >
-          <a href="#contatos" class="nav-link py-2 border-b border-gray-50"
+          <a
+            href="#contatos"
+            class="nav-link-mobile py-2 border-b border-gray-100 hover:text-vibe-orange transition-colors"
             >Contatos</a
           >
         </nav>
         <a
           href="https://wa.me/5598999099453"
           target="_blank"
-          class="flex items-center justify-center gap-2 bg-vibe-orange text-white font-bold px-5 py-3 rounded-xl shadow-md w-full text-center"
+          class="flex items-center justify-center gap-2 bg-vibe-orange text-white font-bold px-5 py-3 rounded-xl shadow-md w-full text-center hover:bg-orange-600 transition-colors"
         >
           <span>Entre em contato via WhatsApp</span>
         </a>
