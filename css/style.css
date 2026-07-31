@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --vibe-green: #2d813e;
+  --vibe-orange: #f08323;
+  --vibe-dark: #151421;
+  --vibe-light: #fafafa;
+}
+
+/* Utilitários diretos para garantir injeção das cores */
+.bg-vibe-green {
+  background-color: var(--vibe-green) !important;
+}
+.text-vibe-green {
+  color: var(--vibe-green) !important;
+}
+
+.bg-vibe-orange {
+  background-color: var(--vibe-orange) !important;
+}
+.text-vibe-orange {
+  color: var(--vibe-orange) !important;
+}
+
+.bg-vibe-dark {
+  background-color: var(--vibe-dark) !important;
+}
+.text-vibe-dark {
+  color: var(--vibe-dark) !important;
+}
+
+.bg-vibe-light {
+  background-color: var(--vibe-light) !important;
+}
+
+/* Trava global de segurança para imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}

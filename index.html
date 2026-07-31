@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibe Opinião | Insights Reais e Pesquisas de Mercado</title>
+
+    <!-- Fonte Oficial (Mulish) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CDN Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="font-sans bg-white text-vibe-dark antialiased selection:bg-vibe-orange selection:text-white"
+  >
+    <!-- ==========================================
+        CABECALHO / NAVEGACAO PRINCIPAL
+    =========================================== -->
+    <header
+      class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-2">
+          <img
+            src="/assets/images/logo2.png"
+            alt="Logo Vibe Opinião"
+            class="w-48 h-auto object-contain"
+          />
+        </a>
+
+        <!-- Menu de Navegação (Desktop - SPA Smooth Scroll) -->
+        <nav
+          class="hidden md:flex items-center gap-8"
+          aria-label="Navegação Principal"
+        >
+          <a
+            href="#inicio"
+            class="text-vibe-orange font-bold transition-colors hover:text-vibe-orange"
+            >Início</a
+          >
+          <a
+            href="#quem-somos"
+            class="text-gray-700 hover:text-vibe-orange font-semibold transition-colors"
+            >Quem Somos</a
+          >
+          <a
+            href="#servicos"
+            class="text-gray-700 hover:text-vibe-orange font-semibold transition-colors"
+            >Nossos Serviços</a
+          >
+          <a
+            href="#contatos"
+            class="text-gray-700 hover:text-vibe-orange font-semibold transition-colors"
+            >Contatos</a
+          >
+        </nav>
+
+        <!-- Botão CTA Cabeçalho com Ícone do WhatsApp -->
+        <div class="hidden sm:block">
+          <a
+            href="https://wa.me/5598999099453"
+            target="_blank"
+            class="inline-flex items-center gap-2 bg-vibe-orange hover:bg-opacity-90 text-white font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"
+              />
+            </svg>
+            <span>Entre em contato</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================
+          1. SECAO HERO (PRINCIPAL)
+      =========================================== -->
+      <section
+        class="relative bg-gradient-to-b from-gray-50 to-white py-16 lg:py-24 overflow-hidden"
+        id="inicio"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          <!-- Conteúdo Textual da Hero -->
+          <div class="space-y-6 text-center lg:text-left z-10">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-vibe-dark leading-tight tracking-tight"
+            >
+              Insights reais direto da
+              <span class="text-vibe-green">porta do seu cliente.</span>
+            </h1>
+            <p
+              class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 font-medium"
+            >
+              Descubra tendências e opiniões na palma da sua mão, coletadas
+              presencialmente.
+            </p>
+            <div class="pt-4">
+              <a
+                href="https://wa.me/5598999099453"
+                target="_blank"
+                class="inline-flex items-center gap-3 bg-vibe-green hover:bg-opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"
+                  />
+                </svg>
+                <span>Solicite uma proposta!</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Espaço da Imagem Principal da Hero -->
+          <div class="relative flex justify-center lg:justify-end">
+            <div
+              class="w-full max-w-lg lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+            >
+              <img
+                src="./assets/images/hero-pesquisadora.jpg"
+                alt="Pesquisadora Vibe Opinião em campo"
+                class="w-full h-auto object-cover min-h-[350px] bg-gray-200"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+          2. SECAO QUEM SOMOS
+      =========================================== -->
+      <section class="py-16 lg:py-24 bg-white" id="quem-somos">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Imagem Quem Somos -->
+            <div class="relative flex justify-center">
+              <div
+                class="w-full max-w-lg rounded-2xl overflow-hidden shadow-xl border-4 border-white"
+              >
+                <img
+                  src="./assets/images/hero-pesquisadora.jpg"
+                  alt="Equipe Vibe Opinião em ação"
+                  class="w-full h-auto object-cover min-h-[350px] bg-gray-100"
+                />
+              </div>
+            </div>
+
+            <!-- Conteúdo Institucional -->
+            <div class="space-y-6">
+              <span
+                class="inline-block text-xs font-black uppercase tracking-widest text-vibe-orange bg-orange-50 px-3 py-1 rounded-md"
+              >
+                CONHEÇA A VIBE OPINIÃO
+              </span>
+              <h2
+                class="text-3xl sm:text-4xl font-extrabold text-vibe-dark leading-snug"
+              >
+                Especialistas em Inteligência de Mercado e Pesquisas de Campo.
+              </h2>
+              <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                Nascemos para aproximar empresas, gestores e marcas da opinião
+                real da população. Atuando com metodologia presencial
+                porta-a-porta, garantimos amostragens fidedignas, rápidas e
+                auditáveis para embasamento de grandes decisões estratégicas.
+              </p>
+              <a
+                href="https://wa.me/5598999099453"
+                target="_blank"
+                class="inline-flex items-center gap-2 bg-vibe-green text-white font-bold px-6 py-3 rounded-xl hover:bg-opacity-90 transition-all shadow-md"
+              >
+                <span>Fale com a nossa equipe</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cards de Missão, Visão e Valores -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+            <div
+              class="bg-gray-50 p-8 rounded-2xl border border-gray-100 space-y-3"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-green-100 text-vibe-green flex items-center justify-center font-bold text-xl"
+              >
+                ✓
+              </div>
+              <h3 class="text-xl font-bold text-vibe-dark">Missão</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Entregar dados estatísticos precisos e humanizados de porta em
+                porta, impulsionando negócios e projetos regionais.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-50 p-8 rounded-2xl border border-gray-100 space-y-3"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-orange-100 text-vibe-orange flex items-center justify-center font-bold text-xl"
+              >
+                👍
+              </div>
+              <h3 class="text-xl font-bold text-vibe-dark">Visão</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Ser referência regional em pesquisas de campo e coleta de dados
+                analíticos com máxima transparência e agilidade.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-50 p-8 rounded-2xl border border-gray-100 space-y-3"
+            >
+              <div
+                class="w-10 h-10 rounded-lg bg-green-100 text-vibe-green flex items-center justify-center font-bold text-xl"
+              >
+                ✌
+              </div>
+              <h3 class="text-xl font-bold text-vibe-dark">Valores</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Rigor metodológico, respeito ao entrevistado, ética nas
+                estatísticas e compromisso com os resultados dos nossos
+                parceiros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+          3. SECAO METODOLOGIA AGIL
+      =========================================== -->
+      <section class="py-16 lg:py-24 bg-gray-50" id="metodologia">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          <!-- Bloco de Texto -->
+          <div class="space-y-6">
+            <span
+              class="inline-block text-xs font-black uppercase tracking-widest text-vibe-green bg-green-50 px-3 py-1 rounded-md"
+            >
+              METODOLOGIA ÁGIL
+            </span>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-vibe-dark leading-snug"
+            >
+              Da coleta na rua direto para o seu painel de decisões.
+            </h2>
+            <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+              Nossa equipe vai a campo para capturar a percepção real do seu
+              público. Transformamos conversas e opiniões presenciais em
+              métricas estruturadas e prontas para uso estratégico.
+            </p>
+
+            <!-- Lista de Diferenciais -->
+            <ul class="space-y-3 pt-2 text-vibe-dark font-bold">
+              <li class="flex items-center gap-3 text-vibe-green">
+                <span class="w-2.5 h-2.5 rounded-full bg-vibe-green"></span>
+                <span>Cobertura Local</span>
+              </li>
+              <li class="flex items-center gap-3 text-vibe-green">
+                <span class="w-2.5 h-2.5 rounded-full bg-vibe-green"></span>
+                <span>Validação em Tempo Real</span>
+              </li>
+              <li class="flex items-center gap-3 text-vibe-green">
+                <span class="w-2.5 h-2.5 rounded-full bg-vibe-green"></span>
+                <span>Painéis Intuitivos</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bloco do Dashboard / Imagem -->
+          <div
+            class="bg-white rounded-2xl p-6 sm:p-8 flex items-center justify-center min-h-[300px] shadow-sm border border-gray-100"
+          >
+            <img
+              src="./assets/images/dashboard-mockup.png"
+              alt="Painel de Decisões e Gráficos"
+              class="max-w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+          4. SECAO SERVICOS
+      =========================================== -->
+      <section class="py-16 lg:py-24 bg-vibe-light" id="servicos">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-center text-vibe-dark mb-12 sm:mb-16"
+          >
+            Como Ajudamos o Seu Negócio
+          </h2>
+
+          <!-- Grid dos Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <article
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100"
+            >
+              <div class="relative h-48 bg-gray-200">
+                <img
+                  src="./assets/images/servico-satisfacao.jpg"
+                  alt="Pesquisa de Opinião"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute bottom-3 left-3 right-3 bg-vibe-orange text-white font-bold px-4 py-2 rounded-lg text-sm shadow"
+                >
+                  Pesquisa de Opinião e Satisfação
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex items-center">
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  Entenda a percepção do cliente sobre sua marca, produtos ou
+                  serviços com dados diretos da rua.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100"
+            >
+              <div class="relative h-48 bg-gray-200">
+                <img
+                  src="./assets/images/servico-eleitoral.jpg"
+                  alt="Pesquisa Eleitoral"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute bottom-3 left-3 right-3 bg-vibe-orange text-white font-bold px-4 py-2 rounded-lg text-sm shadow"
+                >
+                  Pesquisa Eleitoral e Consumo
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex items-center">
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  Mapeamento da intenção de voto, rejeição e hábitos de consumo
+                  em bairros e regiões específicas.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100"
+            >
+              <div class="relative h-48 bg-gray-200">
+                <img
+                  src="./assets/images/servico-validacao.jpg"
+                  alt="Validação de Negócio"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute bottom-3 left-3 right-3 bg-vibe-orange text-white font-bold px-4 py-2 rounded-lg text-sm shadow"
+                >
+                  Validação para Novo Negócio
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex items-center">
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  Descubra se uma nova região ou ponto comercial tem demanda
+                  real antes de investir.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+          5. SECAO NOSSO CONTATO E LOCALIZACAO
+      =========================================== -->
+      <section
+        class="py-16 lg:py-24 bg-gray-50 border-t border-gray-100"
+        id="contatos"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div class="text-center space-y-4 max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-vibe-dark">
+              Nosso Contato e Localização
+            </h2>
+            <p class="text-gray-600 text-base sm:text-lg">
+              Para informações, dúvidas, sugestões entre em contato conosco.
+              Retornaremos o mais breve possível e teremos grande prazer em
+              respondê-los.
+            </p>
+          </div>
+
+          <!-- Cards de Contato -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Endereço -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-5"
+            >
+              <div class="p-3 bg-orange-50 text-vibe-orange rounded-xl">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-vibe-dark mb-1">Endereço</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  São Luís - MA, Brasil
+                </p>
+              </div>
+            </div>
+
+            <!-- Telefones -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-5"
+            >
+              <div class="p-3 bg-green-50 text-vibe-green rounded-xl">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-vibe-dark mb-1">Telefones</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  (98) 99909-9453
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-5"
+            >
+              <div class="p-3 bg-orange-50 text-vibe-orange rounded-xl">
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-vibe-dark mb-1">Email</h3>
+                <p class="text-gray-600 text-sm leading-relaxed break-all">
+                  khrystian.dev@hotmail.com<br />vibeopiniao@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div
+            class="rounded-2xl overflow-hidden shadow-md border border-gray-200 h-[380px] w-full"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127503.22606360432!2d-44.31682733973957!3d-2.5387416390192534!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68ee2d6342dd3%3A0x63339031ef09a5b3!2zU8OjbyBMdcOtdyAtIE1BLA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+          6. SECAO CTA (ENTRE EM CONTATO CONOSCO - DARK)
+      =========================================== -->
+      <section
+        class="py-24 bg-vibe-dark text-white relative overflow-hidden flex items-center justify-center min-h-[460px]"
+        id="cta"
+      >
+        <!-- Marca d'água da Logo ao fundo -->
+        <div
+          class="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-15"
+        >
+          <img
+            src="./assets/images/logo.png"
+            alt=""
+            class="w-[650px] max-w-[90%] h-auto object-contain"
+          />
+        </div>
+
+        <div
+          class="max-w-4xl mx-auto px-4 text-center space-y-8 relative z-10 w-full"
+        >
+          <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+            Entre Em Contato Conosco
+          </h2>
+          <p
+            class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-normal"
+          >
+            Quer saber como aplicar pesquisas de opinião no seu negócio ou
+            projeto? Digite sua mensagem abaixo para iniciar uma conversa direta
+            com nossa equipe no WhatsApp!
+          </p>
+
+          <!-- Input e Botão de Envio Direto -->
+          <form
+            action="https://wa.me/5598999099453"
+            target="_blank"
+            method="GET"
+            class="max-w-xl mx-auto flex flex-col sm:flex-row items-center gap-3 bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 shadow-2xl"
+          >
+            <div class="relative w-full flex items-center">
+              <span class="pl-4 text-gray-400">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                name="text"
+                placeholder="Digite sua mensagem..."
+                class="w-full bg-transparent text-white placeholder-gray-400 px-3 py-3 focus:outline-none text-base"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full sm:w-auto bg-vibe-green hover:bg-opacity-90 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg hover:scale-105 flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer"
+            >
+              <span>Enviar</span>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <div class="pt-2">
+            <a
+              href="https://wa.me/5598999099453"
+              target="_blank"
+              class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-vibe-orange transition-colors"
+            >
+              <span
+                >Ou prefere ligar diretamente? Clique aqui para falar via
+                WhatsApp</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================
+        RODAPE (FOOTER)
+    =========================================== -->
+    <footer class="bg-vibe-dark text-gray-400 border-t border-gray-800 text-sm">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+      >
+        <!-- Coluna 1: Logo & Descrição -->
+        <div class="space-y-4">
+          <img
+            src="./assets/images/logo.png"
+            alt="Vibe Opinião Logo"
+            class="h-10 w-auto"
+          />
+          <p class="text-xs leading-relaxed text-gray-400">
+            Transformamos conversas presenciais em inteligência estatística para
+            a sua região. Metodologia ágil e precisa para tomadas de decisão
+            seguras.
+          </p>
+        </div>
+
+        <!-- Coluna 2: Informações de Contato -->
+        <div class="space-y-3">
+          <h3 class="text-white font-bold tracking-wider text-xs uppercase">
+            INFORMAÇÕES DE CONTATO
+          </h3>
+          <ul class="space-y-2 text-xs">
+            <li>
+              Telefone:
+              <a
+                href="tel:98999099453"
+                class="text-gray-300 hover:text-vibe-orange transition-colors"
+                >(98) 99909-9453</a
+              >
+            </li>
+            <li>
+              Email:
+              <a
+                href="mailto:khrystian.dev@hotmail.com"
+                class="text-gray-300 hover:text-vibe-orange transition-colors"
+                >khrystian.dev@hotmail.com</a
+              >
+            </li>
+            <li>
+              Suporte:
+              <a
+                href="mailto:vibeopiniao@gmail.com"
+                class="text-gray-300 hover:text-vibe-orange transition-colors"
+                >vibeopiniao@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Diferencial -->
+        <div class="space-y-3">
+          <h3 class="text-white font-bold tracking-wider text-xs uppercase">
+            DIFERENCIAL
+          </h3>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="#metodologia" class="hover:text-white transition-colors"
+                >COBERTURA LOCAL</a
+              >
+            </li>
+            <li>
+              <a href="#metodologia" class="hover:text-white transition-colors"
+                >VALIDAÇÃO EM TEMPO REAL</a
+              >
+            </li>
+            <li>
+              <a href="#metodologia" class="hover:text-white transition-colors"
+                >PAINÉIS INTUITIVOS</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Links -->
+        <div class="space-y-3">
+          <h3 class="text-white font-bold tracking-wider text-xs uppercase">
+            LINKS
+          </h3>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="#inicio" class="hover:text-white transition-colors"
+                >INÍCIO</a
+              >
+            </li>
+            <li>
+              <a href="#quem-somos" class="hover:text-white transition-colors"
+                >QUEM SOMOS</a
+              >
+            </li>
+            <li>
+              <a href="#servicos" class="hover:text-white transition-colors"
+                >NOSSOS SERVIÇOS</a
+              >
+            </li>
+            <li>
+              <a href="#contatos" class="hover:text-white transition-colors"
+                >CONTATOS</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright + Créditos do Desenvolvedor -->
+      <div
+        class="border-t border-gray-800/80 py-6 text-center text-xs text-gray-400"
+      >
+        <p>
+          &copy; <strong class="text-vibe-orange">Vibe Opinião</strong>. Todos
+          os Direitos Reservados. Desenvolvido por
+          <a
+            href="https://kelvynk.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-vibe-orange hover:underline font-bold"
+          >
+            kelvynk.com.br
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Entry Script -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
