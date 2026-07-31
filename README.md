@@ -15,7 +15,7 @@
 
 ## 📌 Sobre o Projeto
 
-O **Vibe Opinião** é um Site Institucional moderno projetada para uma empresa especializada em coleta presencial de _insights_ e pesquisas de mercado em tempo real.
+O **Vibe Opinião** é um Site Institucional moderno projetado para uma empresa especializada em coleta presencial de _insights_ e pesquisas de mercado em tempo real.
 
 O projeto foi desenvolvido do zero, traduzindo com precisão os requisitos e o design system definidos no **Figma** para um código limpo, performático, acessível e totalmente responsivo.
 
