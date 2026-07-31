@@ -22,6 +22,7 @@
     <!-- ==========================================
         CABECALHO / NAVEGACAO PRINCIPAL
     =========================================== -->
+
     <header
       class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
     >
@@ -33,39 +34,39 @@
           <img
             src="/assets/images/logo2.png"
             alt="Logo Vibe Opinião"
-            class="w-48 h-auto object-contain"
+            class="w-40 sm:w-48 h-auto object-contain"
           />
         </a>
 
-        <!-- Menu de Navegação (Desktop - SPA Smooth Scroll) -->
+        <!-- Menu Desktop -->
         <nav
           class="hidden md:flex items-center gap-8"
-          aria-label="Navegação Principal"
+          aria-label="Navegação Principal Desktop"
         >
           <a
             href="#inicio"
-            class="text-vibe-orange font-bold transition-colors hover:text-vibe-orange"
+            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Início</a
           >
           <a
             href="#quem-somos"
-            class="text-gray-700 hover:text-vibe-orange font-semibold transition-colors"
+            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Quem Somos</a
           >
           <a
             href="#servicos"
-            class="text-gray-700 hover:text-vibe-orange font-semibold transition-colors"
+            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Nossos Serviços</a
           >
           <a
             href="#contatos"
-            class="text-gray-700 hover:text-vibe-orange font-semibold transition-colors"
+            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Contatos</a
           >
         </nav>
 
-        <!-- Botão CTA Cabeçalho com Ícone do WhatsApp -->
-        <div class="hidden sm:block">
+        <!-- Botão CTA Desktop -->
+        <div class="hidden md:block">
           <a
             href="https://wa.me/5598999099453"
             target="_blank"
@@ -79,6 +80,86 @@
             <span>Entre em contato</span>
           </a>
         </div>
+
+        <!-- Botão Hambúrguer (Mobile) -->
+        <button
+          id="menu-btn"
+          type="button"
+          class="md:hidden p-2 rounded-lg text-gray-700 hover:text-vibe-orange hover:bg-gray-100 focus:outline-none transition-all duration-300 active:scale-95"
+          aria-label="Abrir Menu"
+        >
+          <svg
+            id="icon-open"
+            class="w-7 h-7 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="icon-close"
+            class="w-7 h-7 hidden transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu Dropdown Mobile com Animações de Transição -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-b border-gray-100 px-6 pt-3 pb-6 space-y-5 shadow-xl transition-all duration-300 ease-in-out opacity-0 -translate-y-4 origin-top"
+      >
+        <nav class="flex flex-col space-y-3 font-semibold text-gray-700">
+          <a
+            href="#inicio"
+            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+            >Início</a
+          >
+          <a
+            href="#quem-somos"
+            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+            >Quem Somos</a
+          >
+          <a
+            href="#servicos"
+            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+            >Nossos Serviços</a
+          >
+          <a
+            href="#contatos"
+            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+            >Contatos</a
+          >
+        </nav>
+
+        <!-- Botão com Ícone do WhatsApp -->
+        <a
+          href="https://wa.me/5598999099453"
+          target="_blank"
+          class="flex items-center justify-center gap-2.5 bg-vibe-orange hover:bg-opacity-95 active:scale-98 text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 w-full text-center"
+        >
+          <svg class="w-5 h-5 fill-current animate-bounce" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"
+            />
+          </svg>
+          <span>Entre em contato via WhatsApp</span>
+        </a>
       </div>
     </header>
 
@@ -186,51 +267,102 @@
           </div>
 
           <!-- Cards de Missão, Visão e Valores -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-            <div
-              class="bg-gray-50 p-8 rounded-2xl border border-gray-100 space-y-3"
-            >
-              <div
-                class="w-10 h-10 rounded-lg bg-green-100 text-vibe-green flex items-center justify-center font-bold text-xl"
-              >
-                ✓
-              </div>
-              <h3 class="text-xl font-bold text-vibe-dark">Missão</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                Entregar dados estatísticos precisos e humanizados de porta em
-                porta, impulsionando negócios e projetos regionais.
-              </p>
-            </div>
 
-            <div
-              class="bg-gray-50 p-8 rounded-2xl border border-gray-100 space-y-3"
-            >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Card Missão -->
               <div
-                class="w-10 h-10 rounded-lg bg-orange-100 text-vibe-orange flex items-center justify-center font-bold text-xl"
+                class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-vibe-green hover:-translate-y-1"
               >
-                👍
+                <div
+                  class="w-14 h-14 bg-emerald-50 text-vibe-green rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                >
+                  <!-- Ícone Alvo / Check -->
+                  <svg
+                    class="w-7 h-7"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Missão</h3>
+                <p class="text-gray-600 leading-relaxed text-sm">
+                  Entregar dados estatísticos precisos e humanizados de porta em
+                  porta, impulsionando negócios e projetos regionais.
+                </p>
               </div>
-              <h3 class="text-xl font-bold text-vibe-dark">Visão</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                Ser referência regional em pesquisas de campo e coleta de dados
-                analíticos com máxima transparência e agilidade.
-              </p>
-            </div>
 
-            <div
-              class="bg-gray-50 p-8 rounded-2xl border border-gray-100 space-y-3"
-            >
+              <!-- Card Visão -->
               <div
-                class="w-10 h-10 rounded-lg bg-green-100 text-vibe-green flex items-center justify-center font-bold text-xl"
+                class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-vibe-orange hover:-translate-y-1"
               >
-                ✌
+                <div
+                  class="w-14 h-14 bg-orange-50 text-vibe-orange rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                >
+                  <!-- Ícone Olho / Visão -->
+                  <svg
+                    class="w-7 h-7"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Visão</h3>
+                <p class="text-gray-600 leading-relaxed text-sm">
+                  Ser referência regional em pesquisas de campo e coleta de
+                  dados analíticos com máxima transparência e agilidade.
+                </p>
               </div>
-              <h3 class="text-xl font-bold text-vibe-dark">Valores</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">
-                Rigor metodológico, respeito ao entrevistado, ética nas
-                estatísticas e compromisso com os resultados dos nossos
-                parceiros.
-              </p>
+
+              <!-- Card Valores -->
+              <div
+                class="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-vibe-green hover:-translate-y-1"
+              >
+                <div
+                  class="w-14 h-14 bg-emerald-50 text-vibe-green rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                >
+                  <!-- Ícone Escudo / Valores -->
+                  <svg
+                    class="w-7 h-7"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Valores</h3>
+                <p class="text-gray-600 leading-relaxed text-sm">
+                  Rigor metodológico, respeito ao entrevistado, ética nas
+                  estatísticas e compromisso com os resultados dos nossos
+                  parceiros.
+                </p>
+              </div>
             </div>
           </div>
         </div>
