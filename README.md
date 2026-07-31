@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Vibe Opinião Banner]([assets/images/hero-bg.jpg](https://github.com/kelvynkhrystian/site-institucional/blob/main/assets/images/logo2.png?raw=true))
+![Vibe Opinião Banner]((https://github.com/kelvynkhrystian/site-institucional/blob/main/assets/images/logo2.png?raw=true))
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
