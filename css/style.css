@@ -57,3 +57,17 @@ img {
 .animated-wave {
   animation: wavePulse 4s ease-in-out infinite;
 }
+
+/* Força o Swiper e as imagens a cobrirem 100% do viewport no mobile e desktop */
+#inicio .swiper,
+#inicio .swiper-slide {
+  height: 100% !important;
+  min-height: 100dvh !important;
+}
+
+#inicio .swiper-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
