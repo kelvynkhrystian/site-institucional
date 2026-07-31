@@ -38,3 +38,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* ==========================================
+   CSS DA ONDA (WAVE)
+=========================================== */
+
+/* Animação suave e segura: altera a opacidade sem mover o SVG para os lados */
+@keyframes wavePulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.88;
+  }
+}
+
+.animated-wave {
+  animation: wavePulse 4s ease-in-out infinite;
+}

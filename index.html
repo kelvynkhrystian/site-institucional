@@ -15,16 +15,41 @@
 
     <!-- CDN Tailwind CSS v4 -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      /* Animação suave e contínua para a Onda SVG sem quebrar/cortar as pontas */
+      @keyframes waveMove {
+        0% {
+          transform: translateX(0) translateZ(0) scaleY(1);
+        }
+        50% {
+          transform: translateX(-2%) translateZ(0) scaleY(1.08);
+        }
+        100% {
+          transform: translateX(0) translateZ(0) scaleY(1);
+        }
+      }
+
+      .animated-wave {
+        animation: waveMove 6s ease-in-out infinite;
+        transform-origin: bottom center;
+      }
+    </style>
   </head>
   <body
     class="font-sans bg-white text-vibe-dark antialiased selection:bg-vibe-orange selection:text-white"
   >
     <!-- ==========================================
-        CABECALHO / NAVEGACAO PRINCIPAL
+        HEADER SOBREPOSTO (Fixed no topo, sem empurrar o conteúdo)
     =========================================== -->
-
     <header
-      class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
+      id="main-header"
+      class="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ease-in-out bg-transparent"
     >
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
@@ -45,22 +70,22 @@
         >
           <a
             href="#inicio"
-            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
+            class="nav-link text-white hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Início</a
           >
           <a
             href="#quem-somos"
-            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
+            class="nav-link text-white hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Quem Somos</a
           >
           <a
             href="#servicos"
-            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
+            class="nav-link text-white hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Nossos Serviços</a
           >
           <a
             href="#contatos"
-            class="nav-link text-gray-700 hover:text-vibe-orange font-semibold transition-colors duration-200"
+            class="nav-link text-white hover:text-vibe-orange font-semibold transition-colors duration-200"
             >Contatos</a
           >
         </nav>
@@ -85,12 +110,12 @@
         <button
           id="menu-btn"
           type="button"
-          class="md:hidden p-2 rounded-lg text-gray-700 hover:text-vibe-orange hover:bg-gray-100 focus:outline-none transition-all duration-300 active:scale-95"
+          class="md:hidden p-2 rounded-lg text-white hover:text-vibe-orange focus:outline-none transition-all duration-300"
           aria-label="Abrir Menu"
         >
           <svg
             id="icon-open"
-            class="w-7 h-7 transition-transform duration-300"
+            class="w-7 h-7"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -104,7 +129,7 @@
           </svg>
           <svg
             id="icon-close"
-            class="w-7 h-7 hidden transition-transform duration-300"
+            class="w-7 h-7 hidden"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -119,45 +144,30 @@
         </button>
       </div>
 
-      <!-- Menu Dropdown Mobile com Animações de Transição -->
+      <!-- Menu Mobile -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white border-b border-gray-100 px-6 pt-3 pb-6 space-y-5 shadow-xl transition-all duration-300 ease-in-out opacity-0 -translate-y-4 origin-top"
+        class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 px-6 pt-3 pb-6 space-y-5 shadow-xl transition-all duration-300 opacity-0 -translate-y-4"
       >
         <nav class="flex flex-col space-y-3 font-semibold text-gray-700">
-          <a
-            href="#inicio"
-            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+          <a href="#inicio" class="nav-link py-2 border-b border-gray-50"
             >Início</a
           >
-          <a
-            href="#quem-somos"
-            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+          <a href="#quem-somos" class="nav-link py-2 border-b border-gray-50"
             >Quem Somos</a
           >
-          <a
-            href="#servicos"
-            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+          <a href="#servicos" class="nav-link py-2 border-b border-gray-50"
             >Nossos Serviços</a
           >
-          <a
-            href="#contatos"
-            class="nav-link mobile-link hover:text-vibe-orange py-2 border-b border-gray-50 transition-colors hover:pl-1 duration-200"
+          <a href="#contatos" class="nav-link py-2 border-b border-gray-50"
             >Contatos</a
           >
         </nav>
-
-        <!-- Botão com Ícone do WhatsApp -->
         <a
           href="https://wa.me/5598999099453"
           target="_blank"
-          class="flex items-center justify-center gap-2.5 bg-vibe-orange hover:bg-opacity-95 active:scale-98 text-white font-bold px-5 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 w-full text-center"
+          class="flex items-center justify-center gap-2 bg-vibe-orange text-white font-bold px-5 py-3 rounded-xl shadow-md w-full text-center"
         >
-          <svg class="w-5 h-5 fill-current animate-bounce" viewBox="0 0 24 24">
-            <path
-              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"
-            />
-          </svg>
           <span>Entre em contato via WhatsApp</span>
         </a>
       </div>
@@ -165,57 +175,160 @@
 
     <main>
       <!-- ==========================================
-          1. SECAO HERO (PRINCIPAL)
+          1. SEÇÃO HERO (IMAGEM DESDE O TOPO ZERO)
       =========================================== -->
       <section
-        class="relative bg-gradient-to-b from-gray-50 to-white py-16 lg:py-24 overflow-hidden"
         id="inicio"
+        class="relative w-full h-screen min-h-[650px] overflow-hidden bg-gray-900"
       >
-        <div
-          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-        >
-          <!-- Conteúdo Textual da Hero -->
-          <div class="space-y-6 text-center lg:text-left z-10">
-            <h1
-              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-vibe-dark leading-tight tracking-tight"
-            >
-              Insights reais direto da
-              <span class="text-vibe-green">porta do seu cliente.</span>
-            </h1>
-            <p
-              class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 font-medium"
-            >
-              Descubra tendências e opiniões na palma da sua mão, coletadas
-              presencialmente.
-            </p>
-            <div class="pt-4">
-              <a
-                href="https://wa.me/5598999099453"
-                target="_blank"
-                class="inline-flex items-center gap-3 bg-vibe-green hover:bg-opacity-90 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path
-                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"
-                  />
-                </svg>
-                <span>Solicite uma proposta!</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Espaço da Imagem Principal da Hero -->
-          <div class="relative flex justify-center lg:justify-end">
-            <div
-              class="w-full max-w-lg lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
-            >
+        <!-- Swiper Container - Preenche a tela inteira (0px do topo) -->
+        <div class="swiper hero-swiper w-full h-full absolute inset-0 z-0">
+          <div class="swiper-wrapper w-full h-full">
+            <!-- Slide 1 -->
+            <div class="swiper-slide relative w-full h-full flex items-center">
               <img
-                src="./assets/images/hero-pesquisadora.jpg"
-                alt="Pesquisadora Vibe Opinião em campo"
-                class="w-full h-auto object-cover min-h-[350px] bg-gray-200"
+                src="/assets/images/fundo1.png"
+                alt="Pesquisa de campo"
+                class="absolute inset-0 w-full h-full object-cover object-center z-0"
               />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"
+              ></div>
+
+              <!-- Conteúdo com Padding-Top para não bater no Header -->
+              <div
+                class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-32"
+              >
+                <div class="max-w-2xl text-left">
+                  <span
+                    class="inline-block px-4 py-1.5 bg-vibe-orange/20 text-vibe-orange border border-vibe-orange/30 text-xs font-bold rounded-full mb-6 uppercase tracking-wider backdrop-blur-md"
+                  >
+                    Pesquisas de Campo & Coleta
+                  </span>
+                  <h1
+                    class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6"
+                  >
+                    Insights reais direto da
+                    <span class="text-vibe-green">porta do seu cliente.</span>
+                  </h1>
+                  <p
+                    class="text-base sm:text-lg text-gray-200 mb-8 leading-relaxed max-w-xl"
+                  >
+                    Descubra tendências e opiniões na palma da sua mão,
+                    coletadas presencialmente por equipes qualificadas.
+                  </p>
+                  <a
+                    href="https://wa.me/5598999099453"
+                    target="_blank"
+                    class="inline-flex items-center justify-center gap-3 bg-vibe-green hover:bg-emerald-600 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
+                  >
+                    Solicite uma proposta!
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide relative w-full h-full flex items-center">
+              <img
+                src="/assets/images/fundo2.png"
+                alt="Amostragens Auditáveis"
+                class="absolute inset-0 w-full h-full object-cover object-center z-0"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"
+              ></div>
+
+              <div
+                class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-32"
+              >
+                <div class="max-w-2xl text-left">
+                  <span
+                    class="inline-block px-4 py-1.5 bg-vibe-green/20 text-vibe-green border border-vibe-green/30 text-xs font-bold rounded-full mb-6 uppercase tracking-wider backdrop-blur-md"
+                  >
+                    Amostragens Auditáveis
+                  </span>
+                  <h1
+                    class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6"
+                  >
+                    Decisões estratégicas baseadas em
+                    <span class="text-vibe-orange">dados precisos.</span>
+                  </h1>
+                  <p
+                    class="text-base sm:text-lg text-gray-200 mb-8 leading-relaxed max-w-xl"
+                  >
+                    Garantimos amostragem fidedigna, rápida e auditável para
+                    impulsionar negócios e marcas regionais.
+                  </p>
+                  <a
+                    href="https://wa.me/5598999099453"
+                    target="_blank"
+                    class="inline-flex items-center justify-center gap-3 bg-vibe-orange hover:bg-orange-600 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
+                  >
+                    Fale com a nossa equipe
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- ONDA PERFEITA (Garantida de ponta a ponta sem cortes) -->
+        <div
+          class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-30 pointer-events-none"
+        >
+          <svg
+            class="relative block w-full h-16 sm:h-24 lg:h-32 text-white"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+            fill="currentColor"
+          >
+            <path
+              d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
+            ></path>
+          </svg>
+        </div>
+
+        <!-- Setas do Swiper na direita acima da onda -->
+        <div
+          class="absolute bottom-6 right-6 sm:bottom-10 sm:right-12 z-40 flex items-center gap-3"
+        >
+          <button
+            class="swiper-button-prev-custom w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 backdrop-blur-md text-gray-800 shadow-xl flex items-center justify-center hover:bg-vibe-orange hover:text-white transition-all duration-300 active:scale-90 cursor-pointer"
+            aria-label="Slide anterior"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="swiper-button-next-custom w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 backdrop-blur-md text-gray-800 shadow-xl flex items-center justify-center hover:bg-vibe-orange hover:text-white transition-all duration-300 active:scale-90 cursor-pointer"
+            aria-label="Próximo slide"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -856,6 +969,8 @@
       </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Entry Script -->
     <script type="module" src="./js/main.js"></script>
   </body>
