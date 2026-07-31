@@ -1,0 +1,100 @@
+/* ==========================================================================
+   CSS Reset 
+   ========================================================================== */
+
+/* 1. Box sizing universal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Suavização de rolagem e prevenção de quebras */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+/* 3. Ajustes padrão do body */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family:
+    "Mulish",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+  color: #1e1e1e;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 4. Elementos de mídia responsivos */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5. Herança de fonte para formulários */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+/* 6. Botões e elementos interativos */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* 7. Links sem formatação padrão */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 8. Listas limpas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 9. Evita estouro de texto em títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-weight: 700;
+}
+
+/* 10. Textarea sem redimensionamento horizontal */
+textarea {
+  resize: vertical;
+}
