@@ -211,6 +211,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 6 botões flutuantes
+
+  const floatingButtons = document.getElementById("floating-buttons");
+  const backToTopBtn = document.getElementById("back-to-top");
+
+  // Controla a visibilidade dos botões ao rolar a página
+  window.addEventListener("scroll", () => {
+    // Aparece quando rolar mais de 300px para baixo (aproximadamente após a 1ª seção)
+    if (window.scrollY > 300) {
+      floatingButtons.classList.remove(
+        "opacity-0",
+        "pointer-events-none",
+        "translate-y-4",
+      );
+      floatingButtons.classList.add(
+        "opacity-100",
+        "pointer-events-auto",
+        "translate-y-0",
+      );
+    } else {
+      floatingButtons.classList.remove(
+        "opacity-100",
+        "pointer-events-auto",
+        "translate-y-0",
+      );
+      floatingButtons.classList.add(
+        "opacity-0",
+        "pointer-events-none",
+        "translate-y-4",
+      );
+    }
+  });
+
+  // Ação de rolar suavemente até o topo ao clicar na seta
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   window.addEventListener("scroll", handleHeaderScroll);
   handleHeaderScroll(); // Roda na carga inicial
 });
